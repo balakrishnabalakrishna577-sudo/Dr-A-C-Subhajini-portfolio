@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dr. A. C. Subhajini - Researcher, Educator, and Innovator. Personal academic portfolio showcasing research, publications, projects, and more." />
+  <title>Dr. A. C. Subhajini | Researcher &amp; Educator</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav-header" id="nav-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" aria-label="Dr. A. C. Subhajini – Home">
+        <span class="logo-initials" aria-hidden="true">ACS</span>
+        <span class="logo-name">
+          <span class="logo-name-primary">Dr. A. C. Subhajini</span>
+          <span class="logo-name-sub">Researcher &amp; Educator</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#education"    class="nav-link">Education</a></li>
+        <li><a href="#experience"   class="nav-link">Experience</a></li>
+        <li><a href="#projects"     class="nav-link">Projects</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#skills"       class="nav-link">Skills</a></li>
+        <li><a href="#contact"      class="nav-link nav-link--cta">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <span class="theme-icon theme-icon--light" aria-hidden="true">☀️</span>
+          <span class="theme-icon theme-icon--dark"  aria-hidden="true">🌙</span>
+        </button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="section hero-section" aria-label="Introduction">
+      <!-- Three.js canvas mounts here -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-overlay">
+        <div class="hero-content reveal-up">
+          <p class="hero-pre-title">Welcome to my portfolio</p>
+          <h1 class="hero-title">Dr.&nbsp;A.&nbsp;C.&nbsp;Subhajini</h1>
+          <p class="hero-tagline">Researcher &nbsp;|&nbsp; Educator &nbsp;|&nbsp; Innovator</p>
+          <p class="hero-subtitle">
+            Driving knowledge at the intersection of technology, research, and education.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn--primary">View Portfolio</a>
+            <a href="#contact"  class="btn btn--outline">Contact Me</a>
+            <a href="assets/Dr_AC_Subhajini_CV.pdf" class="btn btn--ghost" download aria-label="Download CV as PDF">
+              ↓ Download CV
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section about-section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">Who I Am</span>
+          <h2 class="section-title" id="about-heading">About Me</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-photo-wrap reveal-left">
+            <div class="about-photo-frame">
+              <img
+                src="assets/images/profile.jpg"
+                alt="Dr. A. C. Subhajini – profile photograph"
+                class="about-photo"
+                onerror="this.parentElement.classList.add('photo-placeholder')"
+              />
+              <div class="photo-placeholder-text" aria-hidden="true">
+                <span>ACS</span>
+              </div>
+            </div>
+            <div class="about-social" aria-label="Social links">
+              <a href="mailto:drsubhajiniac@gmail.com" class="social-link" aria-label="Send email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              </a>
+              <a href="tel:+919003999320" class="social-link" aria-label="Call phone number">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.1 12 19.79 19.79 0 0 1 1 3.2 2 2 0 0 1 2.96 1h3a2 2 0 0 1 2 1.72c.13 1 .38 1.97.74 2.9a2 2 0 0 1-.45 2.11L7.1 8.82a16 16 0 0 0 6 6l1.09-1.19a2 2 0 0 1 2.11-.45c.93.36 1.9.6 2.9.74A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-content reveal-right">
+            <p class="about-bio">
+              Dr. A. C. Subhajini is a distinguished academic and researcher with expertise spanning
+              computer science, engineering, and interdisciplinary research. With a passion for
+              advancing knowledge and nurturing the next generation of thinkers, she combines
+              rigorous research with impactful teaching.
+            </p>
+            <p class="about-bio">
+              Her work is characterized by a commitment to innovation, collaboration, and translating
+              theoretical insights into real-world solutions. She actively contributes to the academic
+              community through publications, conference presentations, and collaborative projects.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-card">
+                <span class="highlight-number" data-count="15">0</span><span class="highlight-suffix">+</span>
+                <span class="highlight-label">Years Experience</span>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-number" data-count="50">0</span><span class="highlight-suffix">+</span>
+                <span class="highlight-label">Publications</span>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-number" data-count="20">0</span><span class="highlight-suffix">+</span>
+                <span class="highlight-label">Projects</span>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-number" data-count="500">0</span><span class="highlight-suffix">+</span>
+                <span class="highlight-label">Students Mentored</span>
+              </div>
+            </div>
+
+            <div class="about-interests">
+              <h3 class="interests-title">Research Interests</h3>
+              <div class="interest-tags" role="list">
+                <span class="tag" role="listitem">Machine Learning</span>
+                <span class="tag" role="listitem">Deep Learning</span>
+                <span class="tag" role="listitem">Computer Vision</span>
+                <span class="tag" role="listitem">IoT &amp; Embedded Systems</span>
+                <span class="tag" role="listitem">Data Science</span>
+                <span class="tag" role="listitem">Signal Processing</span>
+                <span class="tag" role="listitem">VLSI Design</span>
+                <span class="tag" role="listitem">AI in Healthcare</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section id="education" class="section education-section" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">Academic Background</span>
+          <h2 class="section-title" id="education-heading">Education</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="timeline" role="list" aria-label="Educational timeline">
+
+          <div class="timeline-item reveal-timeline" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">2010 – 2014</span>
+                <span class="timeline-badge">Doctorate</span>
+              </div>
+              <h3 class="timeline-title">Ph.D. in [Research Area]</h3>
+              <p class="timeline-org">[University Name], [City]</p>
+              <p class="timeline-desc">
+                Doctoral research focused on [research topic]. Thesis: "[Thesis Title]".
+                Supervised by [Supervisor Name].
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-timeline" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">2006 – 2008</span>
+                <span class="timeline-badge">Post Graduate</span>
+              </div>
+              <h3 class="timeline-title">M.E. / M.Tech in [Specialization]</h3>
+              <p class="timeline-org">[University / Institute Name], [City]</p>
+              <p class="timeline-desc">
+                Specialization in [domain]. Graduated with distinction.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-timeline" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">2002 – 2006</span>
+                <span class="timeline-badge">Under Graduate</span>
+              </div>
+              <h3 class="timeline-title">B.E. / B.Tech in [Branch]</h3>
+              <p class="timeline-org">[College Name], [Affiliated University]</p>
+              <p class="timeline-desc">
+                Core engineering program with strong foundation in mathematics and sciences.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section id="experience" class="section experience-section" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">Career Journey</span>
+          <h2 class="section-title" id="experience-heading">Experience</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="timeline timeline--right" role="list" aria-label="Professional experience timeline">
+
+          <div class="timeline-item reveal-timeline" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">2018 – Present</span>
+                <span class="timeline-badge timeline-badge--accent">Current</span>
+              </div>
+              <h3 class="timeline-title">Associate Professor / Professor</h3>
+              <p class="timeline-org">[Institution Name], [Department]</p>
+              <ul class="timeline-list">
+                <li>Leading undergraduate and postgraduate courses in [subjects].</li>
+                <li>Principal investigator for funded research projects.</li>
+                <li>Mentoring Ph.D. scholars and research students.</li>
+                <li>Member of Board of Studies and academic committees.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-timeline" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">2012 – 2018</span>
+                <span class="timeline-badge">Assistant Professor</span>
+              </div>
+              <h3 class="timeline-title">Assistant Professor</h3>
+              <p class="timeline-org">[Previous Institution Name], [Department]</p>
+              <ul class="timeline-list">
+                <li>Delivered lectures across engineering disciplines.</li>
+                <li>Initiated and led departmental research initiatives.</li>
+                <li>Organized national-level seminars and workshops.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-timeline" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">2008 – 2012</span>
+                <span class="timeline-badge">Early Career</span>
+              </div>
+              <h3 class="timeline-title">Lecturer / Research Associate</h3>
+              <p class="timeline-org">[Institution / Company Name]</p>
+              <ul class="timeline-list">
+                <li>Conducted research and published early-career papers.</li>
+                <li>Assisted in laboratory sessions and academic programs.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">Research &amp; Development</span>
+          <h2 class="section-title" id="projects-heading">Projects</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="projects-grid" role="list">
+
+          <article class="project-card tilt-card reveal-up" role="listitem" aria-label="Project: AI-Based Disease Detection">
+            <div class="project-card-inner">
+              <div class="project-icon" aria-hidden="true">🧠</div>
+              <div class="project-tags">
+                <span class="tag tag--sm">AI</span>
+                <span class="tag tag--sm">Healthcare</span>
+                <span class="tag tag--sm">CNN</span>
+              </div>
+              <h3 class="project-title">AI-Based Disease Detection System</h3>
+              <p class="project-desc">
+                Deep learning model for early detection of diseases using medical imaging data.
+                Achieved [X]% accuracy on benchmark datasets.
+              </p>
+              <div class="project-meta">
+                <span class="project-year">2022 – 2024</span>
+                <span class="project-status project-status--active">Ongoing</span>
+              </div>
+              <button class="btn btn--sm btn--outline project-details-btn"
+                      data-modal="modal-p1"
+                      aria-haspopup="dialog"
+                      aria-label="View details for AI-Based Disease Detection System">
+                Details →
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card reveal-up" role="listitem" aria-label="Project: IoT Smart Monitoring">
+            <div class="project-card-inner">
+              <div class="project-icon" aria-hidden="true">📡</div>
+              <div class="project-tags">
+                <span class="tag tag--sm">IoT</span>
+                <span class="tag tag--sm">Embedded</span>
+                <span class="tag tag--sm">Sensors</span>
+              </div>
+              <h3 class="project-title">IoT-Based Smart Environmental Monitoring</h3>
+              <p class="project-desc">
+                Real-time environmental monitoring system using IoT sensors, edge computing,
+                and cloud dashboards for smart campus applications.
+              </p>
+              <div class="project-meta">
+                <span class="project-year">2020 – 2022</span>
+                <span class="project-status project-status--done">Completed</span>
+              </div>
+              <button class="btn btn--sm btn--outline project-details-btn"
+                      data-modal="modal-p2"
+                      aria-haspopup="dialog"
+                      aria-label="View details for IoT Smart Environmental Monitoring">
+                Details →
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card reveal-up" role="listitem" aria-label="Project: VLSI Low Power Design">
+            <div class="project-card-inner">
+              <div class="project-icon" aria-hidden="true">🔬</div>
+              <div class="project-tags">
+                <span class="tag tag--sm">VLSI</span>
+                <span class="tag tag--sm">Low Power</span>
+                <span class="tag tag--sm">FPGA</span>
+              </div>
+              <h3 class="project-title">Low-Power VLSI Design Optimization</h3>
+              <p class="project-desc">
+                Novel techniques for reducing power consumption in VLSI circuits, targeting
+                wearable and portable device applications.
+              </p>
+              <div class="project-meta">
+                <span class="project-year">2019 – 2021</span>
+                <span class="project-status project-status--done">Completed</span>
+              </div>
+              <button class="btn btn--sm btn--outline project-details-btn"
+                      data-modal="modal-p3"
+                      aria-haspopup="dialog"
+                      aria-label="View details for Low-Power VLSI Design">
+                Details →
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card reveal-up" role="listitem" aria-label="Project: Computer Vision for Surveillance">
+            <div class="project-card-inner">
+              <div class="project-icon" aria-hidden="true">👁️</div>
+              <div class="project-tags">
+                <span class="tag tag--sm">Computer Vision</span>
+                <span class="tag tag--sm">OpenCV</span>
+                <span class="tag tag--sm">YOLO</span>
+              </div>
+              <h3 class="project-title">Computer Vision Surveillance System</h3>
+              <p class="project-desc">
+                Intelligent surveillance using real-time object detection and anomaly
+                identification for campus security applications.
+              </p>
+              <div class="project-meta">
+                <span class="project-year">2021 – 2023</span>
+                <span class="project-status project-status--active">Ongoing</span>
+              </div>
+              <button class="btn btn--sm btn--outline project-details-btn"
+                      data-modal="modal-p4"
+                      aria-haspopup="dialog"
+                      aria-label="View details for Computer Vision Surveillance">
+                Details →
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card reveal-up" role="listitem" aria-label="Project: Signal Processing for Biomedical">
+            <div class="project-card-inner">
+              <div class="project-icon" aria-hidden="true">📊</div>
+              <div class="project-tags">
+                <span class="tag tag--sm">Signal Processing</span>
+                <span class="tag tag--sm">Biomedical</span>
+                <span class="tag tag--sm">MATLAB</span>
+              </div>
+              <h3 class="project-title">Biomedical Signal Analysis Framework</h3>
+              <p class="project-desc">
+                Advanced signal processing techniques for analysing ECG/EEG biomedical
+                signals to aid clinical diagnosis.
+              </p>
+              <div class="project-meta">
+                <span class="project-year">2018 – 2020</span>
+                <span class="project-status project-status--done">Completed</span>
+              </div>
+              <button class="btn btn--sm btn--outline project-details-btn"
+                      data-modal="modal-p5"
+                      aria-haspopup="dialog"
+                      aria-label="View details for Biomedical Signal Analysis">
+                Details →
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card reveal-up" role="listitem" aria-label="Project: NLP Text Classification">
+            <div class="project-card-inner">
+              <div class="project-icon" aria-hidden="true">💬</div>
+              <div class="project-tags">
+                <span class="tag tag--sm">NLP</span>
+                <span class="tag tag--sm">Deep Learning</span>
+                <span class="tag tag--sm">BERT</span>
+              </div>
+              <h3 class="project-title">NLP-Based Text Classification Engine</h3>
+              <p class="project-desc">
+                Transformer-based system for automated classification of academic and
+                technical documents with high precision.
+              </p>
+              <div class="project-meta">
+                <span class="project-year">2023 – Present</span>
+                <span class="project-status project-status--active">Ongoing</span>
+              </div>
+              <button class="btn btn--sm btn--outline project-details-btn"
+                      data-modal="modal-p6"
+                      aria-haspopup="dialog"
+                      aria-label="View details for NLP Text Classification">
+                Details →
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PUBLICATIONS ========== -->
+    <section id="publications" class="section publications-section" aria-labelledby="publications-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">Academic Contributions</span>
+          <h2 class="section-title" id="publications-heading">Publications</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="pub-filters reveal-up" role="group" aria-label="Filter publications">
+          <button class="pub-filter-btn active" data-filter="all"    aria-pressed="true">All</button>
+          <button class="pub-filter-btn" data-filter="journal"       aria-pressed="false">Journals</button>
+          <button class="pub-filter-btn" data-filter="conference"    aria-pressed="false">Conferences</button>
+          <button class="pub-filter-btn" data-filter="book-chapter"  aria-pressed="false">Book Chapters</button>
+          <button class="pub-filter-btn" data-filter="2024"          aria-pressed="false">2024</button>
+          <button class="pub-filter-btn" data-filter="2023"          aria-pressed="false">2023</button>
+          <button class="pub-filter-btn" data-filter="2022"          aria-pressed="false">2022</button>
+        </div>
+
+        <div class="pub-list" id="pub-list" role="list" aria-live="polite" aria-label="Publications list">
+
+          <article class="pub-card reveal-up" role="listitem" data-type="journal" data-year="2024">
+            <div class="pub-type-badge">Journal</div>
+            <h3 class="pub-title">
+              Deep Learning Approaches for Early Disease Detection in Medical Imaging: A Comprehensive Review
+            </h3>
+            <p class="pub-authors">Subhajini, A. C., [Co-author 1], [Co-author 2]</p>
+            <p class="pub-venue"><em>IEEE Transactions on Medical Imaging</em>, Vol. XX, No. Y, pp. 000–000, 2024.</p>
+            <div class="pub-footer">
+              <span class="pub-year-tag">2024</span>
+              <a href="#" class="pub-doi" aria-label="DOI link for publication">DOI: 10.xxxx/xxxx</a>
+            </div>
+          </article>
+
+          <article class="pub-card reveal-up" role="listitem" data-type="journal" data-year="2024">
+            <div class="pub-type-badge">Journal</div>
+            <h3 class="pub-title">
+              Energy-Efficient IoT Architecture for Real-Time Environmental Monitoring Systems
+            </h3>
+            <p class="pub-authors">Subhajini, A. C., [Co-author]</p>
+            <p class="pub-venue"><em>Sensors and Actuators Journal</em>, Vol. XX, 2024.</p>
+            <div class="pub-footer">
+              <span class="pub-year-tag">2024</span>
+              <a href="#" class="pub-doi" aria-label="DOI link for publication">DOI: 10.xxxx/xxxx</a>
+            </div>
+          </article>
+
+          <article class="pub-card reveal-up" role="listitem" data-type="conference" data-year="2023">
+            <div class="pub-type-badge pub-type-badge--conf">Conference</div>
+            <h3 class="pub-title">
+              Transformer-Based NLP Framework for Automated Academic Document Classification
+            </h3>
+            <p class="pub-authors">Subhajini, A. C., [Co-author 1], [Co-author 2]</p>
+            <p class="pub-venue"><em>Proceedings of IEEE ICASSP 2023</em>, Rhodes, Greece.</p>
+            <div class="pub-footer">
+              <span class="pub-year-tag">2023</span>
+              <a href="#" class="pub-doi" aria-label="DOI link for publication">DOI: 10.xxxx/xxxx</a>
+            </div>
+          </article>
+
+          <article class="pub-card reveal-up" role="listitem" data-type="journal" data-year="2023">
+            <div class="pub-type-badge">Journal</div>
+            <h3 class="pub-title">
+              Low-Power VLSI Design Techniques for Portable Biomedical Applications
+            </h3>
+            <p class="pub-authors">Subhajini, A. C., [Co-author]</p>
+            <p class="pub-venue"><em>Microelectronics Journal</em>, Elsevier, Vol. XX, 2023.</p>
+            <div class="pub-footer">
+              <span class="pub-year-tag">2023</span>
+              <a href="#" class="pub-doi" aria-label="DOI link for publication">DOI: 10.xxxx/xxxx</a>
+            </div>
+          </article>
+
+          <article class="pub-card reveal-up" role="listitem" data-type="conference" data-year="2022">
+            <div class="pub-type-badge pub-type-badge--conf">Conference</div>
+            <h3 class="pub-title">
+              Real-Time Object Detection for Intelligent Surveillance Using YOLOv7
+            </h3>
+            <p class="pub-authors">Subhajini, A. C., [Co-author 1]</p>
+            <p class="pub-venue"><em>International Conference on Computer Vision and Pattern Recognition (CVPR) Workshop</em>, 2022.</p>
+            <div class="pub-footer">
+              <span class="pub-year-tag">2022</span>
+              <a href="#" class="pub-doi" aria-label="DOI link for publication">DOI: 10.xxxx/xxxx</a>
+            </div>
+          </article>
+
+          <article class="pub-card reveal-up" role="listitem" data-type="book-chapter" data-year="2022">
+            <div class="pub-type-badge pub-type-badge--book">Book Chapter</div>
+            <h3 class="pub-title">
+              Signal Processing Techniques for Biomedical Applications
+            </h3>
+            <p class="pub-authors">Subhajini, A. C.</p>
+            <p class="pub-venue">In: <em>Advances in Biomedical Engineering</em> (Eds. [Editor Names]), Springer, 2022, pp. 000–000.</p>
+            <div class="pub-footer">
+              <span class="pub-year-tag">2022</span>
+              <a href="#" class="pub-doi" aria-label="ISBN/DOI link">ISBN: 978-X-XXX-XXXXX-X</a>
+            </div>
+          </article>
+
+          <article class="pub-card reveal-up" role="listitem" data-type="journal" data-year="2022">
+            <div class="pub-type-badge">Journal</div>
+            <h3 class="pub-title">
+              Convolutional Neural Network Architecture for ECG Arrhythmia Classification
+            </h3>
+            <p class="pub-authors">Subhajini, A. C., [Co-author 1], [Co-author 2]</p>
+            <p class="pub-venue"><em>Biomedical Signal Processing and Control</em>, Elsevier, Vol. XX, 2022.</p>
+            <div class="pub-footer">
+              <span class="pub-year-tag">2022</span>
+              <a href="#" class="pub-doi" aria-label="DOI link for publication">DOI: 10.xxxx/xxxx</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="pub-more reveal-up">
+          <p class="pub-note">Showing representative publications. Full list available on request.</p>
+          <a href="mailto:drsubhajiniac@gmail.com?subject=Publication List Request" class="btn btn--outline">
+            Request Full List
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">Competencies</span>
+          <h2 class="section-title" id="skills-heading">Skills</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Technical Skills – Bars -->
+          <div class="skills-col reveal-left">
+            <h3 class="skills-col-title">Technical Proficiency</h3>
+            <div class="skill-bars" role="list">
+
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-header">
+                  <span class="skill-name">Machine Learning / Deep Learning</span>
+                  <span class="skill-pct" aria-label="90 percent">90%</span>
+                </div>
+                <div class="skill-bar-track" aria-hidden="true">
+                  <div class="skill-bar-fill" data-width="90"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-header">
+                  <span class="skill-name">Python / TensorFlow / PyTorch</span>
+                  <span class="skill-pct" aria-label="85 percent">85%</span>
+                </div>
+                <div class="skill-bar-track" aria-hidden="true">
+                  <div class="skill-bar-fill" data-width="85"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-header">
+                  <span class="skill-name">Computer Vision (OpenCV / YOLO)</span>
+                  <span class="skill-pct" aria-label="82 percent">82%</span>
+                </div>
+                <div class="skill-bar-track" aria-hidden="true">
+                  <div class="skill-bar-fill" data-width="82"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-header">
+                  <span class="skill-name">VLSI / FPGA Design</span>
+                  <span class="skill-pct" aria-label="80 percent">80%</span>
+                </div>
+                <div class="skill-bar-track" aria-hidden="true">
+                  <div class="skill-bar-fill" data-width="80"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-header">
+                  <span class="skill-name">IoT &amp; Embedded Systems</span>
+                  <span class="skill-pct" aria-label="78 percent">78%</span>
+                </div>
+                <div class="skill-bar-track" aria-hidden="true">
+                  <div class="skill-bar-fill" data-width="78"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-header">
+                  <span class="skill-name">MATLAB / Signal Processing</span>
+                  <span class="skill-pct" aria-label="85 percent">85%</span>
+                </div>
+                <div class="skill-bar-track" aria-hidden="true">
+                  <div class="skill-bar-fill" data-width="85"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Radial / Soft Skills -->
+          <div class="skills-col reveal-right">
+            <h3 class="skills-col-title">Professional Skills</h3>
+            <div class="radial-skills" role="list">
+
+              <div class="radial-skill" role="listitem">
+                <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                  <circle class="radial-track" cx="50" cy="50" r="40"/>
+                  <circle class="radial-fill" cx="50" cy="50" r="40" data-pct="95"/>
+                </svg>
+                <span class="radial-label">Research</span>
+                <span class="radial-pct" data-count="95">0</span><span>%</span>
+              </div>
+
+              <div class="radial-skill" role="listitem">
+                <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                  <circle class="radial-track" cx="50" cy="50" r="40"/>
+                  <circle class="radial-fill" cx="50" cy="50" r="40" data-pct="92"/>
+                </svg>
+                <span class="radial-label">Teaching</span>
+                <span class="radial-pct" data-count="92">0</span><span>%</span>
+              </div>
+
+              <div class="radial-skill" role="listitem">
+                <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                  <circle class="radial-track" cx="50" cy="50" r="40"/>
+                  <circle class="radial-fill" cx="50" cy="50" r="40" data-pct="88"/>
+                </svg>
+                <span class="radial-label">Leadership</span>
+                <span class="radial-pct" data-count="88">0</span><span>%</span>
+              </div>
+
+              <div class="radial-skill" role="listitem">
+                <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                  <circle class="radial-track" cx="50" cy="50" r="40"/>
+                  <circle class="radial-fill" cx="50" cy="50" r="40" data-pct="90"/>
+                </svg>
+                <span class="radial-label">Writing</span>
+                <span class="radial-pct" data-count="90">0</span><span>%</span>
+              </div>
+
+            </div>
+
+            <div class="skills-tools">
+              <h3 class="skills-col-title">Tools &amp; Technologies</h3>
+              <div class="tool-tags" role="list">
+                <span class="tag" role="listitem">Python</span>
+                <span class="tag" role="listitem">TensorFlow</span>
+                <span class="tag" role="listitem">PyTorch</span>
+                <span class="tag" role="listitem">OpenCV</span>
+                <span class="tag" role="listitem">MATLAB</span>
+                <span class="tag" role="listitem">Verilog/VHDL</span>
+                <span class="tag" role="listitem">Arduino</span>
+                <span class="tag" role="listitem">Raspberry Pi</span>
+                <span class="tag" role="listitem">Scikit-learn</span>
+                <span class="tag" role="listitem">LaTeX</span>
+                <span class="tag" role="listitem">SPSS</span>
+                <span class="tag" role="listitem">Jupyter</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title" id="contact-heading">Contact</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact info -->
+          <div class="contact-info reveal-left">
+            <p class="contact-intro">
+              I welcome collaborations, research discussions, speaking invitations, and student enquiries.
+              Feel free to reach out through any of the channels below.
+            </p>
+
+            <address class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">Name</span>
+                  <span class="contact-item-value">Dr A C Subhajini</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.1 12 19.79 19.79 0 0 1 1 3.2 2 2 0 0 1 2.96 1h3a2 2 0 0 1 2 1.72c.13 1 .38 1.97.74 2.9a2 2 0 0 1-.45 2.11L7.1 8.82a16 16 0 0 0 6 6l1.09-1.19a2 2 0 0 1 2.11-.45c.93.36 1.9.6 2.9.74A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">Mobile</span>
+                  <a href="tel:+919003999320" class="contact-item-value contact-link">+91 90039 99320</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">Email</span>
+                  <a href="mailto:drsubhajiniac@gmail.com" class="contact-item-value contact-link">drsubhajiniac@gmail.com</a>
+                </div>
+              </div>
+            </address>
+          </div>
+
+          <!-- Contact form -->
+          <div class="contact-form-wrap reveal-right">
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="mailto:drsubhajiniac@gmail.com"
+              method="GET"
+              enctype="text/plain"
+              aria-label="Contact form"
+              novalidate
+            >
+              <div class="form-group">
+                <label for="cf-name" class="form-label">Your Name <span aria-hidden="true">*</span></label>
+                <input type="text"  id="cf-name"    name="name"    class="form-input" placeholder="Dr. / Prof. / Mr. / Ms. …" required autocomplete="name" />
+                <span class="form-error" id="error-name" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="cf-email"   name="email"   class="form-input" placeholder="you@example.com" required autocomplete="email" />
+                <span class="form-error" id="error-email" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-subject" class="form-label">Subject</label>
+                <input type="text"  id="cf-subject" name="subject" class="form-input" placeholder="Research Collaboration / Inquiry …" autocomplete="off" />
+              </div>
+
+              <div class="form-group">
+                <label for="cf-message" class="form-label">Message <span aria-hidden="true">*</span></label>
+                <textarea id="cf-message" name="body" class="form-textarea" rows="5" placeholder="Write your message here …" required></textarea>
+                <span class="form-error" id="error-message" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full">
+                Send Message
+              </button>
+              <p class="form-note">* Opens your email client with a pre-filled message.</p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">
+          &copy; <span id="footer-year"></span> Dr. A. C. Subhajini. All rights reserved.
+        </p>
+        <p class="footer-credit">
+          Designed &amp; built with care &nbsp;·&nbsp;
+          <a href="mailto:drsubhajiniac@gmail.com" class="footer-link">drsubhajiniac@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== MODALS (Project Details) ========== -->
+  <div id="modal-overlay" class="modal-overlay" role="presentation" aria-hidden="true">
+    <div id="modal-box" class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+      <button class="modal-close" id="modal-close" aria-label="Close dialog">&times;</button>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <!-- Three.js via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+
+  <!-- Portfolio scripts (order matters) -->
+  <script src="js/three-bg.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
