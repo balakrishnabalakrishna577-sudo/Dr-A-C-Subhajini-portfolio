@@ -568,6 +568,107 @@
   }
 
   /* ──────────────────────────────────────────────────────────
+     10. CERTIFICATE LIGHTBOX
+  ────────────────────────────────────────────────────────── */
+  function initCertLightbox () {
+    const lightbox   = qs('#cert-lightbox');
+    const lbImg      = qs('#cert-lb-img');
+    const lbCaption  = qs('#cert-lb-caption');
+    const lbDots     = qs('#cert-lb-dots');
+    const closeBtn   = qs('#cert-lb-close');
+    const prevBtn    = qs('#cert-lb-prev');
+    const nextBtn    = qs('#cert-lb-next');
+    const backdrop   = qs('.cert-lightbox-backdrop');
+
+    if (!lightbox) return;
+
+    /* Collect all certificates in order */
+    const certs = qsa('.cert-zoom-btn').map(btn => ({
+      src    : btn.dataset.src,
+      caption: btn.dataset.caption,
+    }));
+
+    let current    = 0;
+    let lastFocused = null;
+
+    /* Build dots */
+    function buildDots () {
+      lbDots.innerHTML = '';
+      certs.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'cert-lb-dot' + (i === current ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to certificate ${i + 1}`);
+        dot.addEventListener('click', () => goTo(i));
+        lbDots.appendChild(dot);
+      });
+    }
+
+    function updateDots () {
+      qsa('.cert-lb-dot', lbDots).forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function goTo (index) {
+      current = (index + certs.length) % certs.length;
+      lbImg.classList.add('loading');
+      const newImg = new Image();
+      newImg.onload = () => {
+        lbImg.src = certs[current].src;
+        lbImg.alt = certs[current].caption;
+        lbImg.classList.remove('loading');
+      };
+      newImg.src = certs[current].src;
+      lbCaption.textContent = certs[current].caption;
+      updateDots();
+    }
+
+    function openLightbox (index) {
+      lastFocused = document.activeElement;
+      current = index;
+      buildDots();
+      lbImg.src     = certs[current].src;
+      lbImg.alt     = certs[current].caption;
+      lbCaption.textContent = certs[current].caption;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => closeBtn.focus(), 60);
+    }
+
+    function closeLightbox () {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastFocused) lastFocused.focus();
+    }
+
+    /* Open triggers */
+    qsa('.cert-zoom-btn').forEach((btn, i) => {
+      btn.addEventListener('click', () => openLightbox(i));
+    });
+
+    /* Also open on card click */
+    qsa('.cert-card').forEach((card, i) => {
+      card.addEventListener('click', () => openLightbox(i));
+    });
+
+    /* Controls */
+    prevBtn.addEventListener('click',  (e) => { e.stopPropagation(); goTo(current - 1); });
+    nextBtn.addEventListener('click',  (e) => { e.stopPropagation(); goTo(current + 1); });
+    closeBtn.addEventListener('click', closeLightbox);
+    backdrop.addEventListener('click', closeLightbox);
+
+    /* Keyboard */
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowLeft')  goTo(current - 1);
+      if (e.key === 'ArrowRight') goTo(current + 1);
+    });
+  }
+
+  /* ──────────────────────────────────────────────────────────
      11. DISABLE RIGHT-CLICK CONTEXT MENU
   ────────────────────────────────────────────────────────── */
   function initDisableRightClick () {
@@ -631,6 +732,7 @@
     initSkipLink();
     initDisableRightClick();
     initDisableDevTools();
+    initCertLightbox();
   }
 
   if (document.readyState === 'loading') {
